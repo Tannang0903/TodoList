@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Todo List</title>
+</head>
+
+
+<body>
+    <header id="header">
+        <div class="header__logo">
+            <img src="./assets/img/logo_task.png" alt="" class="header__logo-image">
+            <div class="header__logo-heading">
+                <span class="header__logo-heading-title">Let's get shit done!</span>
+                <img src="./assets/img/peace.png" alt="" class="header__logo-heading-image">
+            </div>
+        </div>
+        <button class="btn__insert-task" id="btnAddTask">+ New task</button>
+    </header>
+
+    <div id="container">
+        <div class="row">
+            <div class="col c-4">
+                <div class="container__part" id="todo">
+                    <div class="container__part-header">
+                        <span class="container__part-header-name">Todo</span>
+                        <span class="container__part-header-quantity"></span>
+                    </div>
+                    <div class="container__part-content" id="listTodo"></div>
+                </div>
+            </div>
+
+            <div class="col c-4">
+                <div class="container__part" id="doing">
+                    <div class="container__part-header">
+                        <span class="container__part-header-name">Doing</span>
+                        <span class="container__part-header-quantity"></span>
+                    </div>
+                    <div class="container__part-content" id="listDoing"></div>
+                </div>
+            </div>
+
+            <div class="col c-4">
+                <div class="container__part" id="finished">
+                    <div class="container__part-header">
+                        <span class="container__part-header-name">Finished</span>
+                        <span class="container__part-header-quantity"></span>
+                    </div>
+                    <div class="container__part-content" id="listFinished"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form_add_new_todo none">
+        <form action="" id="addForm">
+            <div class="form__lable">
+                <label for="">Add new Todo</label>
+                <i class="fa-solid fa-x" id="btnCloseAddForm"></i>
+            </div>
+            <input type="text" class="form__input" id="addCategory" placeholder="Category">
+            <input type="text" class="form__input" id="addTitle" placeholder="Title">
+            <textarea name="" class="form__input" id="addContent" cols="30" rows="3" placeholder="Content"></textarea>
+            <input type="submit" class="form__input" value="Submit" id="btnSubmit">
+        </form>
+    </div>
+
+    <div class="form_edit_todo none">
+        <form action="" id="editForm">
+            <div class="form__lable">
+                <label for="">Edit Todo</label>
+                <i class="fa-solid fa-x" id="btnCloseEditForm"></i>
+            </div>
+            <input type="hidden" id="indexEdit">
+            <input type="" class="form__input" id="editCategory" placeholder="Category">
+            <input type="" class="form__input" id="editTitle" placeholder="Title">
+            <textarea name="" class="form__input" id="editContent" cols="30" rows="3" placeholder="Content"></textarea>
+            <div class="form__radio">
+                <div class="form__radio-item">
+                    <input type="radio" id="todoRadio" name="selected_type" value="todo">
+                    <label for="todo">Todo</label><br>
+                </div>
+                <div class="form__radio-item">
+                    <input type="radio" id="doingRadio" name="selected_type" value="doing">
+                    <label for="doing">Doing</label><br>
+                </div>
+                <div class="form__radio-item">
+                    <input type="radio" id="finishedRadio" name="selected_type" value="finished">
+                    <label for="finished">Finished</label>
+                </div>
+            </div>
+            <input type="submit" class="form__input" value="Submit" id="btnSubmit">
+        </form>
+    </div>
+
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
