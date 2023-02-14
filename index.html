@@ -6,14 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <title>Todo List</title>
 </head>
-
 
 <body>
     <header id="header">
@@ -62,39 +60,59 @@
     </div>
 
 
-    <div class="form_add_new_todo none">
+    <div class="form-add-new-todo none">
         <form action="" id="addForm">
-            <div class="form__lable">
+            <div class="form-lable">
                 <label for="">Add new Todo</label>
                 <i class="fa-solid fa-x" id="btnCloseAddForm"></i>
             </div>
-            <input type="text" class="form__input" id="addCategory" placeholder="Category">
-            <input type="text" class="form__input" id="addTitle" placeholder="Title">
-            <textarea name="" class="form__input" id="addContent" cols="30" rows="3" placeholder="Content"></textarea>
-            <input type="submit" class="form__input" value="Submit" id="btnSubmit">
+            <div class="form-group">
+                <input type="text" class="form-input" id="addCategory" placeholder="Category">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input" id="addTitle" placeholder="Title">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <textarea name="" class="form-input" id="addContent" cols="30" rows="3"
+                    placeholder="Content"></textarea>
+                <span class="form-message"></span>
+            </div>
+            <input type="submit" class="form-input" value="Submit" id="btnSubmit">
         </form>
     </div>
 
-    <div class="form_edit_todo none">
+    <div class="form-edit-todo none">
         <form action="" id="editForm">
-            <div class="form__lable">
+            <div class="form-lable">
                 <label for="">Edit Todo</label>
                 <i class="fa-solid fa-x" id="btnCloseEditForm"></i>
             </div>
             <input type="hidden" id="indexEdit">
-            <input type="" class="form__input" id="editCategory" placeholder="Category">
-            <input type="" class="form__input" id="editTitle" placeholder="Title">
-            <textarea name="" class="form__input" id="editContent" cols="30" rows="3" placeholder="Content"></textarea>
-            <div class="form__radio">
-                <div class="form__radio-item">
+            <div class="form-group">
+                <input type="" class="form-input" id="editCategory" placeholder="Category">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <input type="" class="form-input" id="editTitle" placeholder="Title">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <textarea name="" class="form-input" id="editContent" cols="30" rows="3"
+                    placeholder="Content"></textarea>
+                <span class="form-message"></span>
+            </div>
+            <div class="form-radio form-group">
+                <div class="form-radio--item">
                     <input type="radio" id="todoRadio" name="selected_type" value="todo">
                     <label for="todo">Todo</label><br>
                 </div>
-                <div class="form__radio-item">
+                <div class="form-radio--item">
                     <input type="radio" id="doingRadio" name="selected_type" value="doing">
                     <label for="doing">Doing</label><br>
                 </div>
-                <div class="form__radio-item">
+                <div class="form-radio--item">
                     <input type="radio" id="finishedRadio" name="selected_type" value="finished">
                     <label for="finished">Finished</label>
                 </div>
@@ -103,8 +121,30 @@
         </form>
     </div>
 
-
     <script src="./assets/js/main.js"></script>
+    <script>
+        Validator({
+            form: '#addForm',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#addCategory', 'Vui lòng nhập trường này!'),
+                Validator.isRequired('#addTitle', 'Vui lòng nhập trường này!'),
+                Validator.isRequired('#addContent', 'Vui lòng nhập trường này!'),
+            ],
+        });
+        Validator({
+            form: '#editForm',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#editCategory', 'Vui lòng nhập trường này!'),
+                Validator.isRequired('#editTitle', 'Vui lòng nhập trường này!'),
+                Validator.isRequired('#editContent', 'Vui lòng nhập trường này!'),
+                Validator.isRequired('input[name="selected_type"]', 'Vui lòng nhập trường này!'),
+            ],
+        });
+    </script>
 </body>
 
 </html>
