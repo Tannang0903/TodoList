@@ -15,52 +15,51 @@
 
 <body>
     <header id="header">
-        <div class="header__logo">
-            <img src="./assets/img/logo_task.png" alt="" class="header__logo-image">
-            <div class="header__logo-heading">
-                <span class="header__logo-heading-title">Let's get shit done!</span>
-                <img src="./assets/img/peace.png" alt="" class="header__logo-heading-image">
+        <div class="logo">
+            <img src="./assets/img/logo_task.png" alt="" class="logo__image">
+            <div class="logo__heading">
+                <span class="logo__heading-title">Let's get shit done!</span>
+                <img src="./assets/img/peace.png" alt="" class="logo__heading-image">
             </div>
         </div>
-        <button class="btn__insert-task" id="btnAddTask">+ New task</button>
+        <button id="btnAddTask">+ New task</button>
     </header>
 
     <div id="container">
         <div class="row">
-            <div class="col c-4">
+            <div class="col c-12 l-4">
                 <div class="container__part" id="todo">
-                    <div class="container__part-header">
-                        <span class="container__part-header-name">Todo</span>
-                        <span class="container__part-header-quantity"></span>
+                    <div class="part__header">
+                        <span class="part__name">Todo</span>
+                        <span class="part__quantity"></span>
                     </div>
-                    <div class="container__part-content" id="listTodo"></div>
+                    <div class="part__content" id="listTodo"></div>
                 </div>
             </div>
 
-            <div class="col c-4">
+            <div class="col c-12 l-4">
                 <div class="container__part" id="doing">
-                    <div class="container__part-header">
-                        <span class="container__part-header-name">Doing</span>
-                        <span class="container__part-header-quantity"></span>
+                    <div class="part__header">
+                        <span class="part__name">Doing</span>
+                        <span class="part__quantity"></span>
                     </div>
-                    <div class="container__part-content" id="listDoing"></div>
+                    <div class="part__content" id="listDoing"></div>
                 </div>
             </div>
 
-            <div class="col c-4">
+            <div class="col c-12 l-4">
                 <div class="container__part" id="finished">
-                    <div class="container__part-header">
-                        <span class="container__part-header-name">Finished</span>
-                        <span class="container__part-header-quantity"></span>
+                    <div class="part__header">
+                        <span class="part__name">Finished</span>
+                        <span class="part__quantity"></span>
                     </div>
-                    <div class="container__part-content" id="listFinished"></div>
+                    <div class="part__content" id="listFinished"></div>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <div class="form-add-new-todo none">
+    <div class="form-add-task none">
         <form action="" id="addForm">
             <div class="form-lable">
                 <label for="">Add new Todo</label>
@@ -83,7 +82,7 @@
         </form>
     </div>
 
-    <div class="form-edit-todo none">
+    <div class="form-edit-task none">
         <form action="" id="editForm">
             <div class="form-lable">
                 <label for="">Edit Todo</label>
@@ -141,7 +140,7 @@
                 Validator.isRequired('#editCategory', 'Vui lòng nhập trường này!'),
                 Validator.isRequired('#editTitle', 'Vui lòng nhập trường này!'),
                 Validator.isRequired('#editContent', 'Vui lòng nhập trường này!'),
-                Validator.isRequired('input[name="selected_type"]', 'Vui lòng nhập trường này!'),
+                Validator.isRequired('input[name="selected_type"]', 'Vui lòng chọn trường này!'),
             ],
         });
     </script>

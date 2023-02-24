@@ -24,34 +24,34 @@ body {
   align-items: end;
 }
 
-.header__logo {
+.logo {
   display: flex;
   flex-direction: column;
 }
 
-.header__logo-image {
+.logo__image {
   height: 58px;
 }
 
-.header__logo-heading {
+.logo__heading {
   display: flex;
   align-items: center;
   margin-top: 8px;
 }
 
-.header__logo-heading-title {
+.logo__heading-title {
   font-size: 1.6rem;
   font-weight: 400;
   color: #5a5c63;
 }
 
-.header__logo-heading-image {
+.logo__heading-image {
   width: 23px;
   height: 23px;
   margin: 0 6px;
 }
 
-.btn__insert-task {
+#btnAddTask {
   display: block;
   font-size: 1.6rem;
   font-weight: 400;
@@ -62,12 +62,12 @@ body {
   color: #5a5c63;
 }
 
-.btn__insert-task:hover {
+#btnAddTask:hover {
   background-color: #ddd;
 }
 
 /* Container */
-.container__part-header {
+.part__header {
   position: relative;
   display: flex;
   align-items: center;
@@ -82,7 +82,7 @@ body {
   color: #fff;
 }
 
-.container__part-header::before {
+.part__header::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -91,54 +91,54 @@ body {
   left: 0;
 }
 
-.container__part-header-quantity {
+.part__quantity {
   padding: 2px 6px;
   font-size: 1.4rem;
   border-radius: 4px;
 }
 
-#todo .container__part-header,
-#todo .container__part-header::before {
+#todo .part__header,
+#todo .part__header::before {
   background-color: #00a6da;
 }
 
-#todo .container__part-header .container__part-header-quantity {
+#todo .part__header .part__quantity {
   background-color: #00cdda;
 }
 
-#doing .container__part-header,
-#doing .container__part-header::before {
+#doing .part__header,
+#doing .part__header::before {
   background-color: #e2d072;
 }
 
-#doing .container__part-header .container__part-header-quantity {
+#doing .part__header .part__quantity {
   background-color: #dab700;
 }
 
-#finished .container__part-header,
-#finished .container__part-header::before {
+#finished .part__header,
+#finished .part__header::before {
   background-color: #3bc057;
 }
 
-#finished .container__part-header .container__part-header-quantity {
+#finished .part__header .part__quantity {
   background-color: #53c76a;
 }
 
-.container__part-content {
+.part__content {
   max-height: 70vh;
   overflow-y: scroll;
   padding: 4px 4px 0 14px;
 }
 
-.container__part-content::-webkit-scrollbar {
+.part__content::-webkit-scrollbar {
   width: 8px;
 }
 
-.container__part-content::-webkit-scrollbar-track {
+.part__content::-webkit-scrollbar-track {
   background: #fff;
 }
 
-.container__part-content::-webkit-scrollbar-thumb {
+.part__content::-webkit-scrollbar-thumb {
   background: #888;
 }
 
@@ -149,50 +149,51 @@ body {
   margin-bottom: 22px;
 }
 
-.content__item-header {
+.item__header {
   display: flex;
   justify-content: space-between;
 }
 
-.content__item-heading {
+.item__heading {
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(219, 219, 219, 1);
 }
 
-.content__item-category {
+.item__category {
   font-size: 1.2rem;
   font-weight: 700;
+  min-height: 1.4rem;
   color: #4d8eff;
   text-decoration: underline;
   margin-bottom: 6px;
 }
 
-.content__item-title {
+.item__title {
   display: flex;
   align-items: center;
   font-size: 1.6rem;
   font-weight: 700;
-  min-height: 6rem;
+  min-height: 4rem;
   color: #393939;
 }
 
-.content__item-button {
+.item__button {
   display: flex;
   justify-content: center;
   margin-left: 6px;
 }
 
-.content__item-button i {
+.item__button i {
   font-size: 1.6rem;
   padding: 0 6px;
 }
 
-.content__item-button i:hover {
+.item__button i:hover {
   cursor: pointer;
   color: #727272;
 }
 
-.content__item-content {
+.item__content {
   display: block;
   margin: 12px 0;
   line-height: 1.3rem;
@@ -201,15 +202,15 @@ body {
   color: #5a5c63;
 }
 
-.content__item-datetime {
+.item__datetime {
   display: flex;
 }
 
-.content__item-datetime i {
+.item__datetime i {
   font-size: 1.2rem;
 }
 
-.content__item-time {
+.item__time {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.3rem;
@@ -218,8 +219,8 @@ body {
 }
 
 /* Form */
-.form-add-new-todo,
-.form-edit-todo {
+.form-add-task,
+.form-edit-task {
   position: absolute;
   height: 100%;
   width: 100%;
