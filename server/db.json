@@ -1,0 +1,92 @@
+{
+  "todolist": [
+    {
+      "id": 1,
+      "type": "Done",
+      "heading": "6:30 - 7:35",
+      "title": "Get up",
+      "content": "When life feels short, wake up earlier to enjoy it more",
+      "createdAt": "8/26/2023, 1:04:52 PM"
+    },
+    {
+      "id": 2,
+      "type": "Doing",
+      "heading": "7:00 - 7:30",
+      "title": "Morning Exercise",
+      "content": "-Tập tay \n- Hít đất\n- Gập bụng\n- chạy bộ\n",
+      "createdAt": "8/26/2023, 12:50:51 PM"
+    },
+    {
+      "id": 3,
+      "type": "Done",
+      "heading": "8:30 - 11: 30",
+      "title": "Work",
+      "content": "Learn React \n- Project React \n- Learn Hooks\n\n",
+      "createdAt": "8/26/2023, 1:04:59 PM"
+    },
+    {
+      "heading": "11:30 - 12:00",
+      "title": "Cook",
+      "content": "Không bỏ bữa trưa\n",
+      "type": "Done",
+      "createdAt": "8/25/2023, 10:32:22 PM",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "type": "Doing",
+      "heading": "12:30 - 13:30",
+      "title": "Break",
+      "content": "Take a lunch break to start work again",
+      "createdAt": "8/26/2023, 1:05:06 PM"
+    },
+    {
+      "id": 6,
+      "type": "Todo",
+      "heading": "13:30 - 17:30",
+      "title": "Work",
+      "content": "Learn HTML/C - Do Project ",
+      "createdAt": "8/26/2023, 1:05:01 PM"
+    },
+    {
+      "id": 7,
+      "type": "Todo",
+      "heading": "17:30 - 18:00",
+      "title": "Take out",
+      "content": "Finished the job for the day ",
+      "createdAt": "8/26/2023, 1:04:57 PM"
+    },
+    {
+      "id": 8,
+      "type": "Doing",
+      "heading": "18:30 - 19: 00",
+      "title": "Dinner",
+      "content": "Ngày ăn đủ 3 bữa \n",
+      "createdAt": "8/26/2023, 1:05:06 PM"
+    },
+    {
+      "id": 9,
+      "type": "Todo",
+      "heading": "19:30 - 20:00",
+      "title": "Relax",
+      "content": "Tới giờ chơi game",
+      "createdAt": "8/26/2023, 1:04:53 PM"
+    },
+    {
+      "id": 10,
+      "type": "Todo",
+      "heading": "20:30 - 23:30",
+      "title": "Study",
+      "content": "Học để có việc làm\n",
+      "createdAt": "9/8/2023, 5:39:57 PM"
+    },
+    {
+      "heading": "23: 30 - 6:45",
+      "title": "go to sleep",
+      "content": "Nạp \"năng\" lượng",
+      "type": "Todo",
+      "createdAt": "8/26/2023, 1:01:47 PM",
+      "id": 11
+    }
+  ]
+}
